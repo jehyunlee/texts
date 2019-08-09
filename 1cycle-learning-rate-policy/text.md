@@ -28,8 +28,9 @@
 실질적으로, 학습률은 정해져이씨 않으며 학습 과정에 걸쳐 변화한다. (속도 관점에서) 최적 학습률로 시작하고, (정확성 측면에서) 학습이 마무리될 때 쯤 서서히 줄어드는 것이 바람직하다. 이를 위한 방법으로 <a href='https://towardsdatascience.com/learning-rate-schedules-and-adaptive-learning-rate-methods-for-deep-learning-2c8f433990d1'>학습률 스케줄(learning rate schedule)과 적응적 학습률(adaptive learning rate) 방법</a>이 있다.  
 
 학습률 스케줄은 특정 전략(시간 기반 감소(Time-Based Decay), 단계 감소(Step Decay), 지수 감소(Exponential Decay) 등)에 따라 학습률을 감소시키는 수학 공식이다. 학습이 개시되기 전에 정의되어 학습이 진행되는 동안 동일하게 적용된다. 그러므로 데이터셋의 특성을 반영하여 변화를 주는 것이 불가능하다. 적응적 학습률(Adagrad, Adadelta, RMSprop, Adam 등)은 이 문제를 완화할 수 있지만 더 많은 계산을 요구한다. 보다 깊은 공부를 원한다면 "<a href='http://arxiv.org/abs/1609.04747'>An overview of gradient descent optimization algorithms</a>"를 읽어보기를 권한다.  
-
-
+  
+  
+   
 # 주기 학습률 (CLR: Cyclical Learning Rates)  
 
 학습률을 새롭게 설정하는 방법이 Smith에 의해 발견되어 <a href='http://arxiv.org/abs/1506.01186'>Cyclical Learning Rate</a>라고 명명되었다. 고정되거나 감소하는 학습률을 사용하는 대신 CLR에서는 학습률이 *합리적인* 최소값과 최대값 사이에서 지속적으로 진동할 수 있다.  
@@ -70,7 +71,8 @@ Smith는 **학습률 범위 시험**이라고 하는, 학습률의 합리적인 
 </p>
 
 이후 학습률을 이 두 값 사이에서 설정한 분류 모델은, 특정 범위 내의 구조에서 계산 비용이 크게 증대되는 일 없이 보다 적은 반복을 통해 좋은 결과를 도출할 것이다.
-
-
+  
+  
+   
 # 1 주기 정책(1cycle policy)과 초수렴(Super-convergence)
 
