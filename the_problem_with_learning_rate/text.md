@@ -1,7 +1,7 @@
 # Learning Rate 관련 문제
-> 원본 : https://iconof.com/1cycle-learning-rate-policy/
-> 번역 철학 : 읽으시는 분께서 매끄럽게 읽으실 수 있도록 적절한 의역을 선호합니다. 
-> 전문 용어 : 가급적 우리말 용어를 사용하고자 하며, 원 용어를 병기합니다.
+> 원본 : https://iconof.com/1cycle-learning-rate-policy/  
+> 번역 철학 : 읽으시는 분께서 매끄럽게 읽으실 수 있도록 적절한 의역을 선호합니다.  
+> 전문 용어 : 가급적 우리말 용어를 사용하고자 하며, 원 용어를 병기합니다.  
 
 심층신경망(DNN: Deep Neural Network)은 어려운 전역 최적화 문제다.  
 학습률(LR: Learning Rate)은 심층신경망 학습 조정에 결정적인 hyper-parameter인데, 학습률이 작으면 학습이 느려지고 너무 큰 값을 취하면 손실 함수 수렴이 어려워져 최소값 근처를 맴돌기만 하거나, 심지어 발산하기도 한다.  
