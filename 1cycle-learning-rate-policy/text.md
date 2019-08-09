@@ -27,5 +27,27 @@
 
 실질적으로, 학습률은 정해져이씨 않으며 학습 과정에 걸쳐 변화한다. (속도 관점에서) 최적 학습률로 시작하고, (정확성 측면에서) 학습이 마무리될 때 쯤 서서히 줄어드는 것이 바람직하다. 이를 위한 방법으로 <a href='https://towardsdatascience.com/learning-rate-schedules-and-adaptive-learning-rate-methods-for-deep-learning-2c8f433990d1'>학습률 스케줄(learning rate schedule)과 적응적 학습률(adaptive learning rate) 방법</a>이 있다.  
 
-학습률 스케줄은 특정 전략(시간 기반 감소(Time-Based Decay), 단계 감소(Step Decay), 지수 감소(Exponential Decay) 등)에 따라 학습률을 감소시키는 수학 공식이다. 학습이 개시되기 전에 정의되어 학습이 진행되는 동안 동일하게 적용된다. 그러므로 데이터셋의 특성을 반영하여 변화를 주는 것이 불가능하다. 적응적 학습률(Adagrad, Adadelta, RMSprop, Adam 등)은 이 문제를 완화할 수 있지만 더 많은 계산을 요구한다. 보다 깊은 공부를 원한다면 "<a href='http://arxiv.org/abs/1609.04747'>An overview of gradient descent optimization algorithms</a>"를 권한다.  
+학습률 스케줄은 특정 전략(시간 기반 감소(Time-Based Decay), 단계 감소(Step Decay), 지수 감소(Exponential Decay) 등)에 따라 학습률을 감소시키는 수학 공식이다. 학습이 개시되기 전에 정의되어 학습이 진행되는 동안 동일하게 적용된다. 그러므로 데이터셋의 특성을 반영하여 변화를 주는 것이 불가능하다. 적응적 학습률(Adagrad, Adadelta, RMSprop, Adam 등)은 이 문제를 완화할 수 있지만 더 많은 계산을 요구한다. 보다 깊은 공부를 원한다면 "<a href='http://arxiv.org/abs/1609.04747'>An overview of gradient descent optimization algorithms</a>"를 읽어보기를 권한다.  
+
+# 순환적 학습률 (CLR: Cyclical Learning Rates)  
+
+학습률을 새롭게 설정하는 방법이 Smith에 의해 발견되어 <a href='http://arxiv.org/abs/1506.01186'>Cyclical Learning Rate</a>라고 명명되었다. 고정되거나 감소하는 학습률을 사용하는 대신 CLR에서는 학습률이 *합리적인* 최소값과 최대값 사이에서 지속적으로 진동할 수 있다.  
+
+하나의 CLR 주기는 학습률이 증가하고 감소하는 두 단계로 이루어진다. 각 단계는 학습률이 증가 또는 감소하는 반복수행 횟수(iteration number)로 표현되는 스텝 크기(*stepsize*)를 가지고 있다 (예. 1k, 5k 등). 구체적으로, 스텝 크기가 `5,000`인 CLR 주기는 총 `5,000 + 5,000 = 10,000'번의 반복 횟수로 구성된다. 
+
+<p align="center">
+  <img src="./images/clr.webp">
+</p>
+
+CLR은 계산 비용이 비싸지도 않고, 가장 좋은 학습률을 찾을 수요 자체를 없애버린다. **최적**의 학습률은 최소값과 최대값 사이 어딘가에 놓여 있을 것이기 때문이다. 순환적 학습률은 신경망의 성능을 일시적으로 떨어트릴 수 있음에도 불구하고 전반적으로 더 좋은 결과를 보인다.  
+
+<p align="center">
+  <img src="./images/cifar.jpg">
+</p>
+
+위 그림은 CIFAR-10 데이터셋을 대상으로 70,000번의 반복 수행을 실시한 학습 정확도이다. 고정 학습률(청색)은 70,000 반복 수행 후 81.4%의 정확도를 보이는 반면, CLR (적색)은 25,000 회 반복 수행 후 같은 값을 달성했다.  
+
+> **"본 학습률 정책의 본질은, 학습률 증대는 단기적으로는 부정적 효과가 있지만 장기적으로 이익이라는 것입니다."**  
+> **Smith**
+
 
