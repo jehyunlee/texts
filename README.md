@@ -1,0 +1,2 @@
+# texts
+texts, mainly translation
