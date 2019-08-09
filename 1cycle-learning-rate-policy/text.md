@@ -122,5 +122,7 @@ def fit_one_cycle(learn:Learner, cyc_len:int,
 
 `fit_one_cycle()` 함수를 몇 개의 기본적인 인자와 함께 호출함으로써 1주기 정책의 장점을 누리기 바란다.
 
+<br>
+<br>
 
 <a href='https://twitter.com/mavropalias'>원저자의 Twitter를 Follow하시려면 클릭하세요</a>
