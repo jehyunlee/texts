@@ -28,8 +28,8 @@
 실질적으로, 학습률은 정해져이씨 않으며 학습 과정에 걸쳐 변화한다. (속도 관점에서) 최적 학습률로 시작하고, (정확성 측면에서) 학습이 마무리될 때 쯤 서서히 줄어드는 것이 바람직하다. 이를 위한 방법으로 <a href='https://towardsdatascience.com/learning-rate-schedules-and-adaptive-learning-rate-methods-for-deep-learning-2c8f433990d1'>학습률 스케줄(learning rate schedule)과 적응적 학습률(adaptive learning rate) 방법</a>이 있다.  
 
 학습률 스케줄은 특정 전략(시간 기반 감소(Time-Based Decay), 단계 감소(Step Decay), 지수 감소(Exponential Decay) 등)에 따라 학습률을 감소시키는 수학 공식이다. 학습이 개시되기 전에 정의되어 학습이 진행되는 동안 동일하게 적용된다. 그러므로 데이터셋의 특성을 반영하여 변화를 주는 것이 불가능하다. 적응적 학습률(Adagrad, Adadelta, RMSprop, Adam 등)은 이 문제를 완화할 수 있지만 더 많은 계산을 요구한다. 보다 깊은 공부를 원한다면 "<a href='http://arxiv.org/abs/1609.04747'>An overview of gradient descent optimization algorithms</a>"를 읽어보기를 권한다.  
-  
-  
+ <br> 
+ <br>
    
 # 주기 학습률 (CLR: Cyclical Learning Rates)  
 
