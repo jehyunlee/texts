@@ -4,5 +4,5 @@
 > **전문 용어 :** 가급적 <a href='http://taewan.kim/docs/ml_glossary/'>우리말 용어</a>를 사용하고자 하며, 원어를 병기합니다.  
 
 <p align="center">
-  <img src="./images/1_ymwavXYarjSn8OlTSIrr9A,jpeg">
+  <img src="./images/1_ymwavXYarjSn8OlTSIrr9A.jpeg">
 </p>
