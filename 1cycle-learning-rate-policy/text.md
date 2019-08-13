@@ -1,8 +1,23 @@
-# Learning Rate 관련 문제
+# Fast.ai의 fit_one_cycle method 이해하기
 > **원본 주소 :** https://iconof.com/1cycle-learning-rate-policy/  
 > **번역 철학 :** 매끄럽게 읽으실 수 있는 적절한 의역을 지향합니다.  
 > **전문 용어 :** 가급적 <a href='http://taewan.kim/docs/ml_glossary/'>우리말 용어</a>를 사용하고자 하며, 원어를 병기합니다.  
 
+* **긴 글은 안 읽는 분들을 위한 요약**
+
+> `fit_one_cycle()`은 큰 값의 주기적 학습률(cyclical learning rates)을 적용해서 모델을 매우 빠르고 정확하게 학습한다.
+
+Fast.ai에서 딥러닝 모델을 학습할 때 `fit()`보다 속도와 정확성 측면에서 `fit_one_cycle()`사용이 바람직하다.  
+한마디로 `fit_one_cycle()`은 Leslie Smith의 **1주기 정책(1cycle policy)** 을 Fast.ai에 탑재한 것인데, Smith는 아래 세 편의 논문에서 그의 방법론을 상세하게 설명했다.
+
+1. <a href='http://arxiv.org/abs/1506.01186'>Cyclical Learning Rates for Training Neural Networks</a> (2017)
+2. <a href='http://arxiv.org/abs/1708.07120'>Super-Convergence: Very Fast Training of Neural Networks Using Large Learning Rates</a> (2018)
+3. <a href='http://arxiv.org/abs/1803.09820'>A disciplined approach to neural network hyper-parameters: Part1 - learning rate, batch size, momentum, and weight decay</a> (2018)
+
+본 글에서 1주기 정책의 기저에 깔려있는 개념을 살펴보고 왜 기존 방법론보다 더 잘 작동하는지 살펴보겠다.
+<br>
+
+## Learning Rate 관련 문제
 심층신경망(DNN: Deep Neural Network)은 어려운 전역 최적화 문제다.  
 학습률(LR: Learning Rate)은 심층신경망 학습 조정에 결정적인 hyper-parameter인데, 학습률이 작으면 학습이 느려지고 너무 큰 값을 취하면 손실 함수 수렴이 어려워져 최소값 근처를 맴돌기만 하거나, 심지어 발산하기도 한다.  
 
@@ -35,7 +50,7 @@
  <br> 
  <br>
    
-# 주기 학습률 (CLR: Cyclical Learning Rates)  
+## 주기 학습률 (CLR: Cyclical Learning Rates)  
 
 Smith는 학습률을 새롭게 설정하는 방법을 발견하고 <a href='http://arxiv.org/abs/1506.01186'>Cyclical Learning Rate</a>라는 이름을 붙였다. 고정되거나 감소하는 학습률을 사용하는 대신 CLR에서는 학습률이 *합리적인* 최소값과 최대값 사이에서 지속적으로 진동할 수 있다.  
 
@@ -98,7 +113,7 @@ Smith는 높은 학습률이 규제(regularization)와 마찬가지로 작용함
 <br>
 <br>
 
-# Fastai의 1주기 정책 탑재
+## Fastai의 1주기 정책 탑재
 
 Fastai는 1주기 정책의 상세 부분을 모두 추상화하여 `fit_one_cycle()` 형태의 직관적인 인터페이스를 제공한다.  
 이는 내부적으로 `fit()` 함수를 `OneCycleScheduler` callback 과 함께 호출한다.
