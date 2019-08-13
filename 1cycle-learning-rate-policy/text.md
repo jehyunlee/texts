@@ -2,6 +2,7 @@
 > **원본 주소 :** https://iconof.com/1cycle-learning-rate-policy/  
 > **번역 철학 :** 매끄럽게 읽으실 수 있는 적절한 의역을 지향합니다.  
 > **전문 용어 :** 가급적 <a href='http://taewan.kim/docs/ml_glossary/'>우리말 용어</a>를 사용하고자 하며, 원어를 병기합니다.  
+<br>
 
 * **긴 글은 안 읽는 분들을 위한 요약**
 
@@ -13,7 +14,7 @@ Fast.ai에서 딥러닝 모델을 학습할 때 `fit()`보다 속도와 정확�
 2. <a href='http://arxiv.org/abs/1708.07120'>Super-Convergence: Very Fast Training of Neural Networks Using Large Learning Rates</a> (2018)
 3. <a href='http://arxiv.org/abs/1803.09820'>A disciplined approach to neural network hyper-parameters: Part1 - learning rate, batch size, momentum, and weight decay</a> (2018)
 
-본 글에서 1주기 정책의 기저에 깔려있는 개념을 살펴보고 왜 기존 방법론보다 더 잘 작동하는지 살펴보겠다.
+본 글에서 1주기 정책의 기저에 깔려있는 개념을 살펴보고 기존 방법론보다 더 잘 작동하는 이유를 살펴보겠다.
 <br>
 
 ## Learning Rate 관련 문제
