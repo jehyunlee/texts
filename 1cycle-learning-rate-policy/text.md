@@ -7,8 +7,7 @@
 
 > `fit_one_cycle()`은 큰 값의 주기적 학습률(cyclical learning rates)을 적용해서 모델을 매우 빠르고 정확하게 학습한다.
 
-Fast.ai에서 딥러닝 모델을 학습할 때 `fit()`보다 속도와 정확성 측면에서 `fit_one_cycle()`사용이 바람직하다.  
-한마디로 `fit_one_cycle()`은 Leslie Smith의 **1주기 정책(1cycle policy)** 을 Fast.ai에 탑재한 것인데, Smith는 아래 세 편의 논문에서 그의 방법론을 상세하게 설명했다.
+Fast.ai에서 딥러닝 모델을 학습할 때 `fit()`보다 속도와 정확성 측면에서 `fit_one_cycle()`사용이 바람직하다. 한마디로 `fit_one_cycle()`은 Leslie Smith의 **1주기 정책(1cycle policy)** 을 Fast.ai에 탑재한 것인데, Smith는 아래 세 편의 논문에서 그의 방법론을 상세하게 설명했다.  
 
 1. <a href='http://arxiv.org/abs/1506.01186'>Cyclical Learning Rates for Training Neural Networks</a> (2017)
 2. <a href='http://arxiv.org/abs/1708.07120'>Super-Convergence: Very Fast Training of Neural Networks Using Large Learning Rates</a> (2018)
