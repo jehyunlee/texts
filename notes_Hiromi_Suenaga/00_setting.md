@@ -28,7 +28,7 @@ pip 버전은 v1에 맞추어 설정될 것이기 때문에 사용이 불가능�
 **Conda 설치**  
 `fastai` conda 환경을 만듭니다. 필요한 의존성 패키지도 모두 함께 설치될 것입니다.  
 
-**1. 기존 `fastai` 환경 백업**
+**1. 기존 `fastai` 환경 백업**  
 기존에 v1 기준 `fastai` 환경을 만드셨던 분들은 환경을 백업합니다.  
 v0.7 기준 튜토리얼이 `fastai`라는 이름의 가상환경을 만들기 때문입니다.  
 여기선 `fastai-v1`로 백업하고 기존 `fastai` 환경을 삭제하겠습니다.  
@@ -61,7 +61,7 @@ GPU가 없으시면 `fastai-cpu` 환경을 설정해야 합니다.
 > python -m ipykernel install --user --name fastai --display-name Fastai-MOOC  
 <br>
 
-**2. `jupyter notebook` 실행**
+**2. `jupyter notebook` 실행**  
 튜토리얼 실행을 위해, 반드시 v0.7 설치를 위해 만든 `/fastai` 디렉토리 에 들어가서 `jupyter notebook`을 실행해야 합니다.  
 그렇지 않으면 심볼릭 링크가 깨져 라이브러리가 import 되지 않는 **에러가 발생합니다.**
 
@@ -108,7 +108,7 @@ import fastai
 
 **기타 문제 해결 방법**
 
-**1. Python이 모듈을 어디서 찾고 있는지 알고 싶을 때**
+**1. Python이 모듈을 어디서 찾고 있는지 알고 싶을 때**  
 
 ```python
 import sys
@@ -116,7 +116,7 @@ print(sys.path)
 ```
 <br>  
 
-**2. 어디에 설치된 `fastai`가 불러졌는지 알고 싶을 때**
+**2. 불려진 `fastai`의  알고 싶을 때**  
 
 ```python
 import sys fastai
