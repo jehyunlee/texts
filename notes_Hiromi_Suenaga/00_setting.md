@@ -69,6 +69,7 @@ GPU가 없으시면 `fastai-cpu` 환경을 설정해야 합니다.
 <br>
 
 이제 `courses/dl1/lesson1.ipynb`을 불러와서 실습을 진행할 수 있습니다.
+<br>  
 
 **3. `fast.ai v0.7` 업데이트**  
 향후 업데이트를 하시려면, fastai 디렉토리에서 `git pull`과 가상환경 업데이트를 순차적으로 진행하시면 됩니다.
