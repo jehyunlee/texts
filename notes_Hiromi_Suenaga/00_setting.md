@@ -26,9 +26,9 @@ pip 버전은 v1에 맞추어 설정될 것이기 때문에 앞으로 사용이 
 본 글에서는 필자가 경험한 conda 설치만 설명하겠습니다.  
 
 **Conda 설치**  
-**1.** `fastai` conda 환경을 만듭니다. 필요한 의존성 패키지도 모두 함께 설치될 것입니다.  
+`fastai` conda 환경을 만듭니다. 필요한 의존성 패키지도 모두 함께 설치될 것입니다.  
 
-**1.1** 기존 `fastai` 환경 백업
+**1. 기존 `fastai` 환경 백업**
 기존에 v1 기준 `fastai` 환경을 만드셨던 분들은 환경을 백업합니다.  
 v0.7 기준 튜토리얼이 `fastai`라는 이름의 가상환경을 만들기 때문입니다.  
 여기선 `fastai-v1`로 백업하고 기존 `fastai` 환경을 삭제하겠습니다.  
@@ -44,22 +44,84 @@ GPU가 있으신 분들은 아래 명령을 실행합니다.
 > $ git clone https://github.com/fastai/fastai.git  
 > $ cd fastai  
 > $ conda env create -f environment.yml  
-> $ conda activate fastai  
+<br>
 
 GPU가 없으시면 `fastai-cpu` 환경을 설정해야 합니다.
 
 > $ git clone https://github.com/fastai/fastai.git  
 > $ cd fastai  
 > $ conda env create -f environment-cpu.yml 
-> $ conda activate fastai-cpu
+<br>
 
 (옵션) `jupyter notebook`등에서 가상환경이 적용된 커널을 생성하기 위한 작업을 합니다.  
+편의상 GPU 버전만 설명하지만, CPU 버전도 아래 가상환경 이름만 fastai에서 fastai-cpu로 바꿔주면 동일합니다.  
 
-> conda create --name fastai-mooc --clone fastai  # CPU 버전은 --clone fastai-cpu
-> conda env remove -n fastai  
+방금 만든 가상환경을 activate 하고 `jupyter` 커널 환경을 `Fastai-MOOC`이라는 이름으로 만듭니다.
+> conda activate fastai
+> python -m ipykernel install --user --name fastai --display-name Fastai-MOOC  
+<br>
 
-> conda activate fastai-mooc   
-> python -m ipykernel install --user --name fastai-mooc --display-name Fastai-MOOC  
+**2. `jupyter notebook` 실행**
+튜토리얼 실행을 위해, 반드시 v0.7 설치를 위해 만든 `/fastai` 디렉토리 에 들어가서 `jupyter notebook`을 실행해야 합니다.  
+그렇지 않으면 심볼릭 링크가 깨져 라이브러리가 import 되지 않는 **에러가 발생합니다.**
 
+> jupyter notebook
+<br>
 
+이제 `courses/dl1/lesson1.ipynb`을 불러와서 실습을 진행할 수 있습니다.
 
+**3. `fast.ai v0.7` 업데이트**  
+향후 업데이트를 하시려면, fastai 디렉토리에서 `git pull`과 가상환경 업데이트를 순차적으로 진행하시면 됩니다.
+
+> cd fastai  
+> git pull  
+> conda env update  
+<br>
+
+**4. 뭔가 안돌아가면, 재설치하세요.**  
+
+> conda env **remove** -y -n fastai
+<br>
+
+**`ModuleNotFoundError: No module named bcolz` 해결**  
+필자는 conda 설치로 해결했습니다.
+> conda install -c conda-forge bcolz
+<br>
+
+상세한 내용은 [관련 공식 게시글](https://forums.fast.ai/t/error-no-module-named-bcolz-but-bcolz-is-already-installed/9504/20)을 참고하세요.
+<br>
+
+**v0.7과 v1.0을 같은 환경에서 사용하기**  
+상식적으로 두 버전은 같은 환경에서 작동되고 서로 충돌이 없어야 합니다.  
+필자는 진행해보지 않았지만, [공식 안내서](https://forums.fast.ai/t/fastai-v0-7-install-issues-thread/24652)에 따르면 방법은 다음과 같습니다.  
+
+`fast.ai v1.0`을 통상적인 방법으로 설치하고  
+`fast.ai v0.7`을 숨겨진 경로에 설치한 후에, 
+코드 작성시 0.7을 아래와 같은 방식으로 path에 추가합니다. 
+
+```python
+import sys
+sys.path.insert(0, 'fastai_v0.7_경로`)
+import fastai
+```
+<br>
+
+**기타 문제 해결 방법**
+
+**1. Python이 모듈을 어디서 찾고 있는지 알고 싶을 때**
+
+```python
+import sys
+print(sys.path)
+```
+<br>  
+
+**2. 어디에 설치된 `fastai`가 불러졌는지 알고 싶을 때**
+
+```python
+import sys fastai
+print(sys.modules['fastai'])
+```
+<br>
+
+기타 상세한 내용은 [공식 홈페이지 게시글](https://forums.fast.ai/t/fastai-v0-7-install-issues-thread/24652)을 참고하시기 바랍니다.
