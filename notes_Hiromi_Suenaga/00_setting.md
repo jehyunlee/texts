@@ -83,7 +83,7 @@ GPU가 없으시면 `fastai-cpu` 환경을 설정해야 합니다.
 > conda env **remove** -y -n fastai
 <br>
 
-**`ModuleNotFoundError: No module named bcolz` 해결**  
+**5. `ModuleNotFoundError: No module named bcolz` 해결**  
 필자는 conda 설치로 해결했습니다.
 > conda install -c conda-forge bcolz
 <br>
