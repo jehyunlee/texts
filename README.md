@@ -5,4 +5,4 @@
 
 1. `Fast.ai` [1cycle learning policy](https://github.com/jehyunlee/texts/blob/master/1cycle-learning-rate-policy/text.md)
 2. `Fast.ai` [estimating an optimal learning rate for a deep neural network](https://github.com/jehyunlee/texts/blob/master/estimating_an_optimal_learning_rate_for_a_deep_neural_network/text.md)
-3. `Fast.ai` [강의노트 실행을 위한 환경 설정]
+3. `Fast.ai` [강의노트 실행을 위한 환경 설정](https://github.com/jehyunlee/texts/blob/master/notes_Hiromi_Suenaga/00_setting.md)
