@@ -6,4 +6,4 @@
 1. `Fast.ai` [1cycle learning policy](https://github.com/jehyunlee/texts/blob/master/1cycle-learning-rate-policy/text.md)
 2. `Fast.ai` [estimating an optimal learning rate for a deep neural network](https://github.com/jehyunlee/texts/blob/master/estimating_an_optimal_learning_rate_for_a_deep_neural_network/text.md)
 3. `Fast.ai` [강의노트 실행을 위한 환경 설정](https://github.com/jehyunlee/texts/blob/master/notes_Hiromi_Suenaga/00_setting.md)
-4. `Sciencemag.org` [AI 연구자들은 머신러닝을 연금술이라고 주장한다](https://github.com/jehyunlee/texts/blob/master/AI_researchers_allege_that_machine_learning_is_alchemy/text.md)
+4. `Sciencemag.org` [AI 연구원, 머신러닝을 연금술이라고 주장](https://github.com/jehyunlee/texts/blob/master/AI_researchers_allege_that_machine_learning_is_alchemy/text.md)
