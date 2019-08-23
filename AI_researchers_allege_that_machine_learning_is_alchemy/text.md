@@ -5,7 +5,7 @@
 <br>
 
 ![SGD](https://github.com/jehyunlee/texts/blob/master/AI_researchers_allege_that_machine_learning_is_alchemy/images/ma_0504_NID_alchemy_WEB.jpg)  
-3D 공간의 최소값을 찾는 알고리즘에서, 경사하강법은 시행착오에 의지해서 최적화를 수행한다.  
+<center>3D 공간의 최소값을 찾는 알고리즘에서, 경사하강법은 최적화를 시행착오에 기반해서 수행한다.</center>  
 
 <br>  
 
