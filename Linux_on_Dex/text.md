@@ -47,7 +47,7 @@ $ wget https://webview.linuxondex.com/016/xenial-gnome-with-IJ-GI016.zip
 GUI 기반이라 누구나 쉽게 할 수 있다.  
 
 ![Image Mount](images/lod04.png)  
-
+<br> 
 
 ### 4. 실행
 GUI mode가 기본값으로 실행된다.  
@@ -58,11 +58,35 @@ sudo password는 `secret`이다.
 
 `VS Code`와 `Intelli J`가 기본으로 설치되어 있음을 볼 수 있다.
 
-![Image Mount](images/lod06.jpg)  
+![Dev tools](images/lod06.jpg)  
 <br>  
 
 Text mode를 선택하면 GUI가 없는 터미널로 실행할 수도 있다.  
 아래 그림은 `midnight commander`를 설치하여 실행한 모습이다. 
-![Image Mount](images/lod07.jpg)  
+![text mode](images/lod07.jpg)  
 <br>  
 
+### 5. 업데이트  
+<a href='https://www.linuxondex.com/'>공식 홈페이지</a>에 따르면, 터미널을 실행하거나 텍스트 모드로 로그인 한 후, 리눅스 이미지를 아래와 같은 명령어를 사용하여 업데이트하라고 한다.  
+* **그런데 다 잘 되다가 마지막 줄에서 에러가 난다. 아직 원인을 못찾았다.**  
+
+```bash
+$ sudo -S wget -O - https://www.linuxondex.com/lodapt/keyFile | sudo apt-key add -
+
+$ sudo su
+# sudo -S printf "deb http://www.linuxondex.com/lodapt/ /\n" >> /etc/apt/sources.list
+
+# exit
+
+$ sudo -S apt update
+$ sudo -S apt install linux-on-dex lod-daemon
+//If you have a message about changing the Configuration file, please enter 'Y'.
+```
+
+대신 다음 명령어를 사용하여 데이트를 수행했다.  
+완료 이후 이것저것 사용하면서 기능을 테스트해봐야 할 것 같다.  
+
+```bash
+sudo apt-get upgrade
+```
+![upgrade](images/lod08.jpg)  
