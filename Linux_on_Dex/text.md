@@ -174,5 +174,34 @@ net_raw:x:3004:root, dextop, condauser
 ```bash
 $ su - condauser
 ```
-
+<br>  
+  
 #### 7.5. Archiconda 설치  
+무심코 최신버전을 찾는 분들이 있을텐데, 그러면 안된다고 합니다.  
+0.2.3 버전에서 삭제된 `archiarm` channel이 필요하기 때문에 0.2.2 버전을 설치해야 한다고 합니다.  
+
+```bash  
+$ wget https://github.com/Archiconda/build-tools/releases/download/0.2.2/Archiconda3-0.2.2-Linux-aarch64.sh  
+$ chmod +x Archiconda3-0.2.2-Linux-aarch64.sh  
+$ ./Archiconda3-0.2.2-Linux-aarch64.sh  
+```
+
+그리고, conda를 업데이트합니다.
+```bash
+$ conda update -n base --all
+```
+
+마지막으로, `Jupyter Notebook`등 패키지 설치를 위해 gaiar 채널을 추가합니다.  
+원글에는 명령어에 오타가 한 글자 있습니다.
+```bash
+conda config --add channels gaiar
+conda install -c gaiar jupyter
+```
+<br> 
+
+#### 7.6. 다른 패키지 설치  
+이제 conda 명령어를 이용해 다른 패키지를 설치할 수 있습니다.
+
+```bash
+$ conda install seaborn -y
+```
