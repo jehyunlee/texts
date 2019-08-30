@@ -115,4 +115,64 @@ linux-on-dex의 lod-daemon에 문제가 있는 것으로 판단되어 아래와 
 
 * **다만, 이 글에도 그대로 실행하면 오류가 나는 부분들이 있었습니다.**  
 * 아래 글에서는 이 부분들을 수정하여 실행한 결과를 함께 기록하였습니다.  
+* 상세 설명은 [원 글](https://towardsdatascience.com/pydata-stack-in-your-pocket-literally-73662c20d18e)에 있는 글을 참고해 주시기 바랍니다.  
 
+#### 7.1. apt package manager 수정  
+`Linux on Dex`의 aptitude manager에 문제가 있는 듯 합니다.  
+이를 수정하는 부분입니다. 아래 명령어들을 복사하여 진행하세요.  
+
+```bash
+$ sudo apt-get update  
+$ sudo apt-get upgrade  
+$ sudo purge-old-kernels  
+$ sudo apt auto remove  
+$ sudo apt autoclean  
+```
+
+#### 7.2. Dependency 설치
+Python에게 필요한 libc libary와 다른 의존성 패키지를 설치한다고 합니다.  
+**원 글에서는 libc6-2.27 버전과 zlib1g-1.2.11 버전을 사용했는데, 제 Tab S4에서는 버전이 맞지 않는다는 오류가 났습니다.** 다행히 오류 메시지에 어떤 버전을 써보라고 나와있어서, 버전을 바꾸어 실행했더니 잘 설치되었습니다.  또한 처음 설치하는 libc6_2.27.deb은 configuration 문제로 보이는 오류 메시지가 나와서, 다른 식으로 실행하여 해결했습니다.  
+
+```bash
+$ wget http://launchpadlibrarian.net/365857916/libc6_2.27-3ubuntu1_arm64.deb -O libc6_2.27.deb  
+$ wget http://launchpadlibrarian.net/365857921/libc-bin_2.27-3ubuntu1_arm64.deb -O libc-bin_2.27.deb  
+   
+$ sudo dpkg --auto-deconfigure -i libc6_2.27.deb  
+$ sudo dpkg -i libc-bin_2.27.deb  
+  
+$ wget http://launchpadlibrarian.net/365856924/locales_2.27-3ubuntu1_all.deb -O locales_2.27.deb  
+$ sudo dpkg -i locales_2.27.deb  
+  
+$ wget https://mirror.yandex.ru/ubuntu-ports/pool/main/z/zlib/zlib1g-dbg_1.2.8.dfsg-2ubuntu4.1_arm64.deb -O zlib1g-dbg_1.2.8.deb  
+$ wget https://mirror.yandex.ru/ubuntu-ports/pool/main/z/zlib/zlib1g-dev_1.2.8.dfsg-2ubuntu4.1_arm64.deb -O zlib1g-dev_1.2.8.deb  
+  
+$ sudo dpkg -i zlib1g-dbg_1.2.8.deb  
+$ sudo dpkg -i zlib1g-dev_1.2.8.deb  
+```
+<br>  
+  
+#### 7.3. `conda` user 계정 생성    
+`Linux on Dex`의 기본 사용자 이름은 `dextop`입니다. 그런데 여기에 Permission management문제가 있어서, `condauser`라는 새로운 계정을 만들고 이 계정으로 `Archiconda`를 설치하고자 합니다.  
+sudo 계정의 기본 비밀번호는 앞서 말씀드린 대로 `secret`입니다.
+
+```bash
+$ sudo adduser condauser  
+$ sudo usermod -aG sudo condauser
+```
+<br>  
+  
+#### 7.4. 권한 부여      
+`vim` 등으로 `\etc\group`을 다음과 같이 수정합니다.
+단, 순서나 모든 계정명을 아래와 똑같이 고칠 필요는 없습니다. 두 곳에 모두 `condauser`가 있다는 것이 중요합니다.
+
+```bash
+inet:x:3003:root, condauser, dextop
+net_raw:x:3004:root, dextop, condauser
+```
+
+이제 사용자 이름을 변경합니다.
+```bash
+$ su - condauser
+```
+
+#### 7.5. Archiconda 설치  
