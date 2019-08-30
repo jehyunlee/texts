@@ -27,11 +27,11 @@
 ### 3. Linux Image File 다운로드 및 압축해제    
 Ubuntu 16.04 Xenial 기반 Image가 제공된다.  
 * **2019년 8월 30일 현재 [공식 링크](https://webview.linuxondex.com/)에서 다운로드 오류가 발생한다**  
+* Android에서는 다운로드 중 조용히 종료되고,  
+* Windows에서는 다운로드 중 `취소됨` 메시지와 함께 다운로드가 중단된다.  
 
 #### 3.1. Download  
-Android에서는 다운로드 중 조용히 종료되고,  
-Windows에서는 다운로드 중 `취소됨` 메시지와 함께 다운로드가 중단된다.  
-필자는 다른 리눅스 기기(WSL)을 사용해 wget 명령어를 이용해 다운받았다.  
+필자는 다른 리눅스 기기(윈도 노트북의 WSL)을 사용해 wget 명령어를 이용해 다운받았다.  
 
 ```bash
 $ wget https://webview.linuxondex.com/016/xenial-gnome-with-IJ-GI016.zip
@@ -53,16 +53,16 @@ GUI 기반이라 누구나 쉽게 할 수 있다.
 GUI mode가 기본값으로 실행된다.  
 sudo password는 `secret`이다.  
 
-![Image Mount](images/lod05.png)  
+![Image Mount](images/lod05.jpg)  
 <br>  
 
 `VS Code`와 `Intelli J`가 기본으로 설치되어 있음을 볼 수 있다.
 
-![Image Mount](images/lod06.png)  
+![Image Mount](images/lod06.jpg)  
 <br>  
 
 Text mode를 선택하면 GUI가 없는 터미널로 실행할 수도 있다.  
 아래 그림은 `midnight commander`를 설치하여 실행한 모습이다. 
-![Image Mount](images/lod07.png)  
+![Image Mount](images/lod07.jpg)  
 <br>  
 
