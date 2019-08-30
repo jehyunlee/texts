@@ -219,7 +219,7 @@ $ jupyter notebook
 ![jupyter notebook](images/lod15.jpg)  
 <br> 
 
-개인적으로 `Github` 연동, `Google Driv`e 연동 기능을 잘 활용하고 있는 `Jupyter Lab`도 설치하고 실행해 봅니다.  
+개인적으로 `Github` 연동, `Google Drive` 연동 기능을 잘 활용하고 있는 `Jupyter Lab`도 설치하고 실행해 봅니다.  
 
 ```bash
 $ conda install -c conda-forge jupyterlab
