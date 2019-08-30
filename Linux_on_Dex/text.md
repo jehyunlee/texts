@@ -91,7 +91,11 @@ linux-on-dex의 lod-daemon에 문제가 있는 것으로 판단되어 아래와 
 sudo apt-get upgrade
 ```
 ![upgrade](images/lod09.png)  
-
+<br>  
 
 * 이후 추가적인 구글링을 통해 conda 설치까지 성공.  
 * 상세한 정보는 이후 8/30 야간에 업데이트 예정임.  
+
+
+![conda upgrade](images/lod10.png)  
+<br>  
