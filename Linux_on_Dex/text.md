@@ -85,11 +85,13 @@ $ sudo -S apt install linux-on-dex lod-daemon
 //If you have a message about changing the Configuration file, please enter 'Y'.
 ```
 
-대신 다음 명령어를 사용하여 데이트를 수행했다.  
-일단은 이것저것 받아오고 있는데, 진행 상황을 확인하고 기능을 테스트해봐야 할 것 같다.  
-* 추후 업데이트 예정  
+linux-on-dex의 lod-daemon에 문제가 있는 것으로 판단되어 아래와 같이 리눅스 일반 명령을 실행했으나, Permission Error 메시지와 함께 더 이상 진행이 되지 않는다. 치명적인 오류는 아닌 것 같고 단순히 업데이트가 되지 않은 듯.  
 
 ```bash
 sudo apt-get upgrade
 ```
-![upgrade](images/lod08.jpg)  
+![upgrade](images/lod09.png)  
+
+
+* 이후 추가적인 구글링을 통해 conda 설치까지 성공.  
+* 상세한 정보는 이후 8/30 야간에 업데이트 예정임.  
