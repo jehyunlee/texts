@@ -9,7 +9,8 @@
 삼성이 자사의 Android 기기에서 Linux를 사용할 수 있는 환경을 제공합니다. `Dex`환경을 이용한 것이기 때문에 아래에 설명드릴 기술은 삼성 안드로이드(폰, 태블릿)에서만 작동되며, 그것도 비교적 최신 모델에 한해 기능이 제공됩니다.    
 `VScode`와 `IntelliJ`가 탑재되어 있는 것을 보면 어디서든 개발을 하고자 하는 이들을 노린 것으로 보입니다.  
 [`Linux on Dex`](https://www.linuxondex.com/)가 그 이름으로, 상세한 정보는 [공식 홈페이지](https://www.linuxondex.com/)와 [Gaiar Baimuratov의 포스팅](https://towardsdatascience.com/pydata-stack-in-your-pocket-literally-73662c20d18e)을 통해 확인하기 바랍니다.  
-본 글에서는 필자의 설치 과정을 공유합니다.
+본 글에서는 필자의 설치 과정을 공유합니다.  
+참고로 저는 리눅스를 잘 모릅니다. 웹에 있는 여러 경험자들의 안내를 받아 진행하다가 막히면 이것 저것 시도해보는 수준이라, 보다 복잡한 문제에 대해서는 전문가께서 의견주시면 감사하겠습니다.  
 
 - **공식 홈페이지에는 없는 오류**와 **Gaiar의 포스팅과는 다른 상황**이 있어 다소의 구글링을 필요로 했습니다.  
 - Linux Image 압축 해제 후의 용량이 11 GB를 넘으니 감안하도록 합시다.  
@@ -81,7 +82,7 @@ Text mode를 선택하면 GUI가 없는 터미널로 실행할 수도 있습니�
 ![text mode](images/lod07.jpg)  
 <br>  
 
-### 5. 업데이트  
+### 5. `Linux` 업데이트  
 <a href='https://www.linuxondex.com/'>공식 홈페이지</a>에 따르면, 터미널을 실행하거나 텍스트 모드로 로그인 한 후, 리눅스 이미지를 아래와 같은 명령어를 사용하여 업데이트하라고 합니다. 
 * **그런데 마지막 줄에서 에러가 납니다.**  
 
@@ -98,17 +99,20 @@ $ sudo -S apt install linux-on-dex lod-daemon
 //If you have a message about changing the Configuration file, please enter 'Y'.
 ```
 
-linux-on-dex의 lod-daemon에 문제가 있는 것으로 판단되어 아래와 같이 리눅스 일반 명령을 실행했으나, Permission Error 메시지와 함께 더 이상 진행이 되지 않습니다. 시스템에 치명적인 오류는 아닌 것 같고 단순히 업데이트가 되지 않은 듯 합니다만 권한 관련한 문제가 뭔가 있구나 하는 생각이 듭니다.  
-
-```bash
-sudo apt-get upgrade
-```
-![upgrade](images/lod09.png)  
+linux-on-dex의 lod-daemon에 문제가 있는 것으로 판단되어 아래와 같이 `sudo apt-get upgrade` 명령을 실행했으나, Permission Error 메시지와 함께 더 이상 진행이 되지 않습니다. 시스템에 치명적인 오류는 아닌 것 같고 단순히 업데이트가 되지 않은 듯 합니다만 권한 관련한 문제가 뭔가 있구나 하는 생각이 듭니다.  
 <br>  
+  
+### 6. `Linux` 업데이트 - 다시.  
+업데이트가 안된다는 건 너무나도 치명적이라 어떻게 하나 고민을 했는데, 의외로 쉽게 해결했습니다.  아래 그림에서 왼쪽 상단, 쇼핑백처럼 생긴 `Synaptic Package Manager`를 실행하고 업데이트 항목을 지정 (전 단순히 `Mark All Upgrades`를 클릭했습니다), 오른쪽에 있는 `Apply`를 누르자 아무런 문제 없이 잘 진행됩니다.  
 
-* 이후 추가적인 구글링을 통해 conda 설치까지 성공.  
-* 상세한 정보는 이후 8/30 야간에 업데이트 예정임.  
-
-
-![conda upgrade](images/lod10.png)  
+![Synaptic Package Manager](images/lod12.jpg)  
 <br>  
+  
+### 7. Anaconda 설치  
+본 `Linux Image (Ubuntu 16.04 LTS)`에는 기본적으로 `python 2.7`과 `python 3.5`가 설치되어 있습니다.  
+이를 이용해서 개발을 하고자 하시는 분들은 그냥 사용을 하셔도 되지만, 위에서 발생한 `Permission Error`로 인해 이걸 개발용으로 사용할 수 있을까 의구심이 생긴 터라 Anaconda를 설치해보기로 했습니다.  
+실제로 [Anaconda 홈페이지](https://www.anaconda.com)에서 Anaconda와 Miniconda의 최신 버전을 다운받아 설치하면, 오류를 내며 설치가 되지 않습니다. 따라서 [Gaiar님의 안내](https://towardsdatascience.com/pydata-stack-in-your-pocket-literally-73662c20d18e)를 따라 `Archiconda`를 설치하였으며, 결과적으로 간단한 코드를 테스트 한 결과 성공적으로 작동합니다.  
+
+* **다만, 이 글에도 그대로 실행하면 오류가 나는 부분들이 있었습니다.**  
+* 아래 글에서는 이 부분들을 수정하여 실행한 결과를 함께 기록하였습니다.  
+
