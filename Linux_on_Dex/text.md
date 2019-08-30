@@ -1,2 +1,10 @@
-# Samsung Android 기기에서 Linux 사용하기
+# Samsung Android 기기에서 Linux 사용하기  
+---------------------
+
+삼성이 자사의 Android 기기에서 Linux를 사용할 수 있는 환경을 제공한다.  
+[`Linux on Dex`](https://www.linuxondex.com/)가 그 이름으로, 상세한 정보는 홈페이지를 통해 확인하기 바라며 본 글에서는 필자의 설치 과정만을 공유하고자 한다.  
+
+- 이번에도 **공식 홈페이지에는 없는 오류**가 있어 다소의 구글링을 필요로 했다.  
+
+
 
