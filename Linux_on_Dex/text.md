@@ -69,19 +69,21 @@ GUI 모드로 실행하시면, 아래와 같은 화면을 보실 수 있습니�
 ![Image Mount](images/lod05.jpg)  
 <br>  
 
-`VS Code`와 `Intelli J`가 기본으로 설치되어 있음을 볼 수 있다.
+`Chrome`대신 `Chromium`이 설치되어 있으며, 기본 웹브라우저는 `Firefox`입니다.  
+`VS Code`와 `Intelli J`가 기본으로 설치되어 있음을 볼 수 있습니다.
 
 ![Dev tools](images/lod06.jpg)  
 <br>  
 
-Text mode를 선택하면 GUI가 없는 터미널로 실행할 수도 있다.  
-아래 그림은 `midnight commander`를 설치하여 실행한 모습이다. 
+Text mode를 선택하면 GUI가 없는 터미널로 실행할 수도 있습니다.  
+아래 그림은 `midnight commander`를 설치하여 실행한 모습입니다. 
+
 ![text mode](images/lod07.jpg)  
 <br>  
 
 ### 5. 업데이트  
-<a href='https://www.linuxondex.com/'>공식 홈페이지</a>에 따르면, 터미널을 실행하거나 텍스트 모드로 로그인 한 후, 리눅스 이미지를 아래와 같은 명령어를 사용하여 업데이트하라고 한다.  
-* **그런데 다 잘 되다가 마지막 줄에서 에러가 난다. 아직 원인을 못찾았다.**  
+<a href='https://www.linuxondex.com/'>공식 홈페이지</a>에 따르면, 터미널을 실행하거나 텍스트 모드로 로그인 한 후, 리눅스 이미지를 아래와 같은 명령어를 사용하여 업데이트하라고 합니다. 
+* **그런데 마지막 줄에서 에러가 납니다.**  
 
 ```bash
 $ sudo -S wget -O - https://www.linuxondex.com/lodapt/keyFile | sudo apt-key add -
@@ -96,7 +98,7 @@ $ sudo -S apt install linux-on-dex lod-daemon
 //If you have a message about changing the Configuration file, please enter 'Y'.
 ```
 
-linux-on-dex의 lod-daemon에 문제가 있는 것으로 판단되어 아래와 같이 리눅스 일반 명령을 실행했으나, Permission Error 메시지와 함께 더 이상 진행이 되지 않는다. 치명적인 오류는 아닌 것 같고 단순히 업데이트가 되지 않은 듯.  
+linux-on-dex의 lod-daemon에 문제가 있는 것으로 판단되어 아래와 같이 리눅스 일반 명령을 실행했으나, Permission Error 메시지와 함께 더 이상 진행이 되지 않습니다. 시스템에 치명적인 오류는 아닌 것 같고 단순히 업데이트가 되지 않은 듯 합니다만 권한 관련한 문제가 뭔가 있구나 하는 생각이 듭니다.  
 
 ```bash
 sudo apt-get upgrade
