@@ -234,7 +234,7 @@ $ conda install -c conda-forge jupyterlab
 
 실행도 잘 됩니다.  
 간단한 `pandas` 예제 코드를 제 GitHub 계정에서 다운받아 실행한 모습입니다. 
-![jupyter lab](images/lod16.jpg)  
+![pandas example](images/lod17.jpg)  
 <br> 
 
 ### 9. 활용성   
