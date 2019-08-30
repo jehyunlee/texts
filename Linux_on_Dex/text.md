@@ -1,20 +1,25 @@
 # Samsung Android 기기에서 Linux 사용하기  
----------------------
 
-삼성이 자사의 Android 기기에서 Linux를 사용할 수 있는 환경을 제공한다.  
-`VScode`와 `IntelliJ`가 탑재되어 있는 것을 보면 어디서든 개발을 하고자 하는 이들을 노린 것으로 보인다.  
-[`Linux on Dex`](https://www.linuxondex.com/)가 그 이름으로,   
-상세한 정보는 홈페이지를 통해 확인하기 바라며 본 글에서는 필자의 설치 과정만을 공유하고자 한다.  
+> **세 줄 요약**
+> 1) 삼성 안드로이드 제품에 Linux를 설치하고 사용할 수 있음.  
+> 2) 그런데 비공식 노가다가 조금 필요함.  
+> 3) anaconda + jupyter lab (Google Drive 연동, GitHub 연동) 까지 성공함.
 
-- 이번에도 **공식 홈페이지에는 없는 오류**가 있어 다소의 구글링을 필요로 했다.  
-- Linux Image 압축 해제 후의 용량이 11 GB를 넘으니 감안하도록 하자.  
+
+삼성이 자사의 Android 기기에서 Linux를 사용할 수 있는 환경을 제공합니다. `Dex`환경을 이용한 것이기 때문에 아래에 설명드릴 기술은 삼성 안드로이드(폰, 태블릿)에서만 작동되며, 그것도 비교적 최신 모델에 한해 기능이 제공됩니다.    
+`VScode`와 `IntelliJ`가 탑재되어 있는 것을 보면 어디서든 개발을 하고자 하는 이들을 노린 것으로 보입니다.  
+[`Linux on Dex`](https://www.linuxondex.com/)가 그 이름으로, 상세한 정보는 [공식 홈페이지](https://www.linuxondex.com/)와 [Gaiar Baimuratov의 포스팅](https://towardsdatascience.com/pydata-stack-in-your-pocket-literally-73662c20d18e)을 통해 확인하기 바랍니다.  
+본 글에서는 필자의 설치 과정을 공유합니다.
+
+- **공식 홈페이지에는 없는 오류**와 **Gaiar의 포스팅과는 다른 상황**이 있어 다소의 구글링을 필요로 했습니다.  
+- Linux Image 압축 해제 후의 용량이 11 GB를 넘으니 감안하도록 합시다.  
 
 ![Linux on Dex](images/lod01.png)
 
 
 ### 1. 지원 기기  
-본인의 기기가 지원 대상인지 확인한다.  
-필자는 Tab S4 태블릿에 설치했다.    
+본인의 기기가 지원 대상인지 확인합니다.  
+필자는 태블릿(Galaxy Tab S4)에 설치했습니다.    
 
 <p align="center">
   <img src="https://github.com/jehyunlee/texts/blob/master/Linux_on_Dex/images/lod02.png">
@@ -22,38 +27,44 @@
 <br>  
 
 ### 2. `Linux on Dex` App 설치  
-* **2019년 8월 30일 현재 `Google Play`에서 찾을 수 없다**  
-별도의 링크를 이용하여 apk 파일을 다운받고 설치한다 (<a href='https://drive.google.com/open?id=10Ku57itmXIy2gnzWu7VKj8RlMcIFH9vm'>Download Link</a>)  
+* **2019년 8월 30일 현재 `Google Play`에서 `Linux on Dex` 앱을 찾을 수 없습니다**  
+별도의 링크를 이용하여 apk 파일을 다운받고 설치합니다. (<a href='https://drive.google.com/open?id=10Ku57itmXIy2gnzWu7VKj8RlMcIFH9vm'>Download Link</a>)  
 <br>  
   
 ### 3. Linux Image File 다운로드 및 압축해제    
-Ubuntu 16.04 Xenial 기반 Image가 제공된다.  
-* **2019년 8월 30일 현재 [공식 링크](https://webview.linuxondex.com/)에서 다운로드 오류가 발생한다**  
+삼성에서 Ubuntu 16.04 Xenial 기반 Image를 제공합니다.  
+* **2019년 8월 30일 현재 [공식 링크](https://webview.linuxondex.com/)에서 다운로드 오류가 발생합니다**  
 * Android에서는 다운로드 중 조용히 종료되고,  
-* Windows에서는 다운로드 중 `취소됨` 메시지와 함께 다운로드가 중단된다.  
+* Windows에서는 다운로드 중 `취소됨` 메시지와 함께 다운로드가 중단됩니다.  
 
 #### 3.1. Download  
-필자는 다른 리눅스 기기(윈도 노트북의 WSL)을 사용해 wget 명령어를 이용해 다운받았다.  
+필자는 다른 리눅스 환경(윈도 노트북의 WSL)에서 wget 명령어를 이용해 다운받았습니다.  
+용량이 약 4 GB 정도 됩니다.  
 
 ```bash
 $ wget https://webview.linuxondex.com/016/xenial-gnome-with-IJ-GI016.zip
 ```
+
 ![Image Download](images/lod03.png)  
 <br>  
 
 #### 3.2. Transfer to Tablet PC
-그리고 Tablet으로의 전송을 위해 Google Drive에 업로드하였다. (<a href='https://drive.google.com/open?id=1rZfguyO664sjDlp340rQQXEVBHgY-oWB'>Link</a>)
+그리고 Tablet으로의 전송을 위해 Google Drive에 업로드했습니다.  
+이 글을 보시는 여러분은 제 구글드라이브에서 다운받으셔도 좋습니다. (<a href='https://drive.google.com/open?id=1rZfguyO664sjDlp340rQQXEVBHgY-oWB'>Link</a>)  
 
 #### 3.3. Image Mount
-압축을 해제한 후, `Linux on Dex` app을 실행하고 압축을 해제한 image를 불러온다.  
-GUI 기반이라 누구나 쉽게 할 수 있다.  
+다운받은 이미지의 압축을 해제한 후, `Linux on Dex` app을 실행하고 압축을 해제한 image를 불러옵니다.  
+아래 화면에서 왼쪽 아래 반쯤 가린, 주황색 + 모양 버튼을 누르고 이미지 파일을 선택합니다.  
+아직 Image를 올리지 않았으므로 오른쪽은 비어있을 것이지만, 이미지를 마운트하면 아래 사진과 같이 바뀝니다.  
 
-![Image Mount](images/lod04.png)  
+![Image Mount](images/lod11.jpg)  
 <br> 
 
 ### 4. 실행
-GUI mode가 기본값으로 실행된다.  
-sudo password는 `secret`이다.  
+위 사진에서 오른쪽에 있는 주황색 RUN을 클릭하면 GUI mode가 기본값으로 실행됩니다.  
+Terminal mode를 원하시는 분은 아래에 조그맣게 있는 Terminal mode를 클릭하시면 됩니다.  
+기본 sudo password는 `secret`입니다.   
+GUI 모드로 실행하시면, 아래와 같은 화면을 보실 수 있습니다.  
 
 ![Image Mount](images/lod05.jpg)  
 <br>  
