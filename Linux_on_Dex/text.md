@@ -84,7 +84,8 @@ $ sudo -S apt install linux-on-dex lod-daemon
 ```
 
 대신 다음 명령어를 사용하여 데이트를 수행했다.  
-완료 이후 이것저것 사용하면서 기능을 테스트해봐야 할 것 같다.  
+일단은 이것저것 받아오고 있는데, 진행 상황을 확인하고 기능을 테스트해봐야 할 것 같다.  
+* 추후 업데이트 예정  
 
 ```bash
 sudo apt-get upgrade
