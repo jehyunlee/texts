@@ -3,9 +3,11 @@
 
 삼성이 자사의 Android 기기에서 Linux를 사용할 수 있는 환경을 제공한다.  
 `VScode`와 `IntelliJ`가 탑재되어 있는 것을 보면 어디서든 개발을 하고자 하는 이들을 노린 것으로 보인다.  
-[`Linux on Dex`](https://www.linuxondex.com/)가 그 이름으로, 상세한 정보는 홈페이지를 통해 확인하기 바라며 본 글에서는 필자의 설치 과정만을 공유하고자 한다.  
+[`Linux on Dex`](https://www.linuxondex.com/)가 그 이름으로,   
+상세한 정보는 홈페이지를 통해 확인하기 바라며 본 글에서는 필자의 설치 과정만을 공유하고자 한다.  
 
 - 이번에도 **공식 홈페이지에는 없는 오류**가 있어 다소의 구글링을 필요로 했다.  
+- Linux Image 압축 해제 후의 용량이 11 GB를 넘으니 감안하도록 하자.  
 
 ![Linux on Dex](images/lod01.png)
 
