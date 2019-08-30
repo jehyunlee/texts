@@ -190,6 +190,8 @@ $ ./Archiconda3-0.2.2-Linux-aarch64.sh
 ```bash
 $ conda update -n base --all
 ```
+![conda update](images/lod14.jpg)  
+<br> 
 
 마지막으로, `Jupyter Notebook`등 패키지 설치를 위해 gaiar 채널을 추가합니다.  
 원글에는 명령어에 오타가 한 글자 있습니다.
@@ -200,8 +202,43 @@ conda install -c gaiar jupyter
 <br> 
 
 #### 7.6. 다른 패키지 설치  
-이제 conda 명령어를 이용해 다른 패키지를 설치할 수 있습니다.
+이제 `conda` 명령어를 이용해 다른 패키지를 설치할 수 있습니다.  
 
 ```bash
 $ conda install seaborn -y
 ```
+<br> 
+
+### 8. 사용 Test   
+`Jupyter Notebook`을 띄워봅니다.  
+잘 뜹니다.
+
+```bash
+$ jupyter notebook
+```
+![jupyter notebook](images/lod15.jpg)  
+<br> 
+
+개인적으로 `Github` 연동, `Google Driv`e 연동 기능을 잘 활용하고 있는 `Jupyter Lab`도 설치하고 실행해 봅니다.  
+
+```bash
+$ conda install -c conda-forge jupyterlab
+```
+<br>  
+
+그리고 `Github`, `Google Drive` extension 설치 및 환경 설정을 완료한 모습입니다.  
+`Google Drive`에 잘 연결된 것을 보실 수 있습니다.  
+
+![jupyter lab](images/lod16.jpg)  
+<br> 
+
+실행도 잘 됩니다.  
+간단한 `pandas` 예제 코드를 제 GitHub 계정에서 다운받아 실행한 모습입니다. 
+![jupyter lab](images/lod16.jpg)  
+<br> 
+
+### 9. 활용성   
+그래서, 어디에 쓰면 좋을지? 는 사실 아직도 고민스러운 부분입니다.  
+외부에 가볍게 들고 나가서 코딩을 하기에 Tab S4 + Apple 블루투스 키보드 무게는 제 노트북의 무게와 유사합니다.  
+CPU의 성능이 좋은 것도 아니고, GPU는 존재하지 않습니다.  하드웨어의 이점은 없습니다.  
+태블릿밖에 없는 긴급한 상황에서 깃헙에 있는 코드를 간단히 수정하는 정도. 라고 생각이 드는데, 계속 고민해야겠습니다.
