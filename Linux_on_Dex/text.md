@@ -25,8 +25,9 @@
 <p align="center">
   <img src="https://github.com/jehyunlee/texts/blob/master/Linux_on_Dex/images/lod02.png">
 <br>  
+</p>
 
- **Tab S6에는 설치가 안된다는 제보가 있습니다**  
+* **Tab S6에는 설치가 안된다는 제보가 있습니다**  
 
 <p align="center">
   <img src="https://github.com/jehyunlee/texts/blob/master/Linux_on_Dex/images/lod_s6.jpg">
