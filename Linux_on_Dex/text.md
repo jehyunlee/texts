@@ -21,12 +21,18 @@
 ### 1. 지원 기기  
 본인의 기기가 지원 대상인지 확인합니다.  
 필자는 태블릿(Galaxy Tab S4)에 설치했습니다.  
-* **Tab S6에는 설치가 안된다는 제보가 있습니다**  
 
 <p align="center">
   <img src="https://github.com/jehyunlee/texts/blob/master/Linux_on_Dex/images/lod02.png">
+<br>  
+
+ **Tab S6에는 설치가 안된다는 제보가 있습니다**  
+
+<p align="center">
+  <img src="https://github.com/jehyunlee/texts/blob/master/Linux_on_Dex/images/lod_s6.jpg">
 </p>
 <br>  
+
 
 ### 2. `Linux on Dex` App 설치  
 * **2019년 8월 30일 현재 `Google Play`에서 `Linux on Dex` 앱을 찾을 수 없습니다**  
