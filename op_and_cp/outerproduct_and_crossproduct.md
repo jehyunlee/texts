@@ -5,7 +5,7 @@
 
 이 사건은 저의 무지와 대한수학회의 부적절한 용어 선정으로 인해 시작되었습니다.
 
-![vector_products](./images/vector_products.PNG)
+![vector_products](/images/vector_products.PNG)
 
 수학을 멀리한 저는 벡터간 연산을 **내적**, **외적** 크게 두 갈래로 이해하고 (+**인자간 연산**), 내적과 외적은 같은 연산이 여러 이름을 가지고 있다고 알고 있었습니다.
 
@@ -23,11 +23,11 @@
 
 사건의 발단은 대한수학회에서 서로 다른 연산을 모두 `외적`으로 번역한 것입니다.
 
-![kms](./images/kms_term.PNG)
+![kms](/images/kms_term.PNG)
 
 "왜 다른 연산을 같은 이름으로 부르지? 내가 알고 있던 건 뭐지?" 라는 멘탈 데미지를 입고 [wikipedia를 중심으로 구글링을 한 결과](https://ko.wikipedia.org/wiki/%EC%99%B8%EC%A0%81), 사실은 둘이 같은 것이라는 설명을 보고 2차 데미지를 입습니다.
 
-![wiki_kor](./images/wiki_kor01.PNG)
+![wiki_kor](/images/wiki_kor01.PNG)
 <p align='center'><b>뭔말이여 이게...</b></p>
 
 
