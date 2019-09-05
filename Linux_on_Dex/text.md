@@ -45,13 +45,13 @@
 * **2019년 8월 30일 현재 [공식 링크](https://webview.linuxondex.com/)에서 다운로드 오류가 발생합니다**  
 * Android에서는 다운로드 중 조용히 종료되고,  
 * Windows에서는 다운로드 중 `취소됨` 메시지와 함께 다운로드가 중단됩니다.  
-> Windows10, Chrome 이용 다운로드시 정상적으로 다운로드가 된다는 제보가 있었습니다.  
+> Windows10, Chrome 이용 다운로드시 정상적으로 다운로드가 된다는 제보가 있었습니다(Apparatus_Zero님).  
 > 저는 동일 환경에서 위와 같은 에러가 발생하였기에 둘 다 병기합니다.  
 
 #### 3.1. Download  
 필자는 다른 리눅스 환경(윈도 노트북의 WSL)에서 wget 명령어를 이용해 다운받았습니다.  
 용량이 약 4 GB 정도 됩니다.  
->  윈도에서도 wget을 사용할 수 있다고 합니다. <a href='https://zetawiki.com/wiki/%EC%9C%88%EB%8F%84%EC%9A%B0_wget'>Link</a>  
+>  윈도에서도 wget을 사용할 수 있다고 합니다 (Apparatus_Zero님). <a href='https://zetawiki.com/wiki/%EC%9C%88%EB%8F%84%EC%9A%B0_wget'>Link</a>  
 
 ```bash
 $ wget https://webview.linuxondex.com/016/xenial-gnome-with-IJ-GI016.zip
