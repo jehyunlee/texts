@@ -5,19 +5,18 @@
 
 이 사건은 저의 무지와 대한수학회의 부적절한 용어 선정으로 인해 시작되었습니다.
 
-![vector_products](./images/vector_products.PNG)
+![vector_products](./images/vector_products.png)
 
 수학을 멀리한 저는 벡터간 연산을 **내적**, **외적** 크게 두 갈래로 이해하고 (+**인자간 연산**), 내적과 외적은 같은 연산이 여러 이름을 가지고 있다고 알고 있었습니다.
 
 그런데 `numpy`의 `vectorization`을 연습하는 과정에서 마주친 `numpy.outer()` 연산이 제가 알고 있는 그 외적이 아니더군요.
 
 * 내가 알던 외적 = Cross Product,  `numpy.cross()`.  결과물 = **vector**. 
-<p align="center"><img src="/op_and_cp/tex/0d562d8d955d311a13d32ab3dc268cd0.svg?invert_in_darkmode&sanitize=true" align=middle width=614.82553605pt height=59.1786591pt/></p>
+![cp](./tex/0d562d8d955d311a13d32ab3dc268cd0.svg)
+
 * 처음 본 외적 = Outer Product,  `numpy.outer()`.  결과물 = **matrix**.
-
-<p align="center"><img src="/op_and_cp/tex/3e3ffc6e8e35c3b15d1998f6b830b662.svg?invert_in_darkmode&sanitize=true" align=middle width=556.72727385pt height=59.1786591pt/></p>
-
-
+![op](./tex/3e3ffc6e8e35c3b15d1998f6b830b662.svg)
+<br>  
 
 사건의 발단은 대한수학회에서 서로 다른 연산을 모두 `외적`으로 번역한 것입니다.
 
