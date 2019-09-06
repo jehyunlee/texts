@@ -253,3 +253,22 @@ $ conda install -c conda-forge jupyterlab
 외부에 가볍게 들고 나가서 코딩을 하기에 Tab S4 + Apple 블루투스 키보드 무게는 제 노트북의 무게와 유사합니다.  
 CPU의 성능이 좋은 것도 아니고, GPU는 존재하지 않습니다.  하드웨어의 이점은 없습니다.  
 태블릿밖에 없는 긴급한 상황에서 깃헙에 있는 코드를 간단히 수정하는 정도. 라고 생각이 드는데, 계속 고민해야겠습니다.
+  
+* `Colab`과의 비교 (Markdown 작성 기준)  
+  - `Google Colab`과 `LoD`를 상대로 `markdown`문서 작성 테스트를 수행한 결과, `LoD`가 훨씬 낫습니다.  
+특히 `LaTeX` 수식이 있는 문서의 경우 `LaTeX`코드를 문서로 바꾸는 렌더링, 또는 컴파일 과정이 필요한데, `Colab`은 문서 작성 창이 좌우로 분할되어 우측에 실시간 렌더링을 하느라 많이 버벅이는 반면 `LoD`에서 실행한 `jupyter lab`은 그런거 없이 아주 쾌적하네요. 약간 의외였습니다.  
+  - 실행에 큰 부담이 없는, EDA 수준의 작업이라면 충분히 경쟁력이 있다고 생각됩니다.  
+  - 단, 이 때 외부와 파일을 공유해야 하므로 `LoD_Share` 디렉토리에 접근이 필요한데, 기본 사용자 계정인 `dextop`을 `condauser`로 바꿔야 하므로 약간의 추가 작업이 필요합니다.
+  ```bash  
+  1. dextop에서 condauser로 사용자 전환  
+  $ su - condauser  
+    
+  2. LoD_Share 디렉토리에 condauser 접근 권한 부여  
+  $ cd /home/dextop/Desktop/  
+  $ sudo chmod +r LoD_Share  
+  $ sudo chmod +w LoD_Share  
+  $ cd LoD_Share  
+  
+  
+  
+  ```
