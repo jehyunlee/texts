@@ -8,3 +8,4 @@
 3. `Fast.ai` [강의노트 실행을 위한 환경 설정](https://github.com/jehyunlee/texts/blob/master/notes_Hiromi_Suenaga/00_setting.md)
 4. `Sciencemag.org` [AI 연구원, 머신러닝이 연금술에 불과하다고 역설](https://github.com/jehyunlee/texts/blob/master/AI_researchers_allege_that_machine_learning_is_alchemy/text.md)
 5. `Linux on Dex` [Samsung Android 기기에서 Linux 사용하기](https://github.com/jehyunlee/texts/blob/master/Linux_on_Dex/text.md)
+6. `Math` [Vector의 Outer product와 Cross product](https://raw.githack.com/jehyunlee/texts/master/op_and_cp/outerproduct_and_crossproduct.html)
