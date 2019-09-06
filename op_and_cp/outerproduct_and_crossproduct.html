@@ -13179,6 +13179,7 @@ $
 예를 들어, (1, 0, 0), (0, 1, 0), (0, 0, 1)이라는 3차원 벡터공간과 (1, 0), (0, 1) 이라는 2차원 벡터공간이 있을 때 이들의 정보를 모두 유지하면서 새로운 벡터공간을 만들고 싶을 때 쓰는 게 <code>Tensor Product</code> 입니다.<br>
 <br></li>
 <li><p>서로 다른 차원의 벡터공간들을 어떻게 합칠 수 있을까요?  선택지는 <strong>행렬</strong>밖에 없습니다.<br>
+우리가 가진 도구가 많지 않아서 발생하는 일입니다.<br>
 <br> 
 $V$와 $W$에 각기 $\mathbf{v} = \begin{bmatrix}v_{1}\\v_{2}\\\vdots\\v_{n}\end{bmatrix}, \mathbf{w} = \begin{bmatrix}w_{1}\\w_{2}\\\vdots\\w_{m}\end{bmatrix}$ 이라는 두 행렬이 있고, $\mathbf{v} = v_{1}\mathbf{e_{1}} + v_{2}\mathbf{e_{2}} + \cdots + v_{n}\mathbf{e_{n}}$ 일 때<br>
 <br> 
@@ -13214,17 +13215,16 @@ $ 으로 정의됩니다.<br>
 <li>그러면, Exterior algebra $\wedge(V)$ 는 다음 집합 위에 정의되는 이중선형(bilinear)연산입니다.<br>
   $V\otimes V/\text{I, where I} = \{\mathbf{v}\otimes \mathbf{v}|  \forall\mathbf{v} \text{  in } V \}$  </li>
 <li>즉, 이 공간에서는 자기 자신으로 tensor product를 한 녀석들을 전부 0으로 간주하겠다는 뜻입니다.</li>
-<li>예를 들면, 아래와 같은 행렬들은 모두 0입니다.<br>
+<li><p>예를 들면, 아래와 같은 행렬들은 모두 0입니다.<br>
   $(1,2) \otimes (1, 2) = \begin{bmatrix}1&amp;2\\2&amp;4\end{bmatrix}= 0$<br>
   $(0,1) \otimes (0, 1) = \begin{bmatrix}0&amp;0\\0&amp;1\end{bmatrix}= 0$<br>
-<br>  </li>
-</ul>
+<br></p>
 </li>
-<li><p>왜 0으로 정의했나면, 넓이와 부피 때문에 그렇습니다.</p>
-<ul>
-<li>exterior product는 넓이, 부피, 초부피를 의미합니다.  </li>
-<li>그리고, 직관적으로 <strong>하나의 벡터로 생성되는 도형의 부피는 0</strong>이기 때문입니다.<br>
-<br>  </li>
+<li><p>왜 0으로 정의했나면, 넓이와 부피 때문에 그렇습니다.<br>
+exterior product는 넓이, 부피, 초부피를 의미합니다.<br>
+그리고, 직관적으로 <strong>하나의 벡터로 생성되는 도형의 부피는 0</strong>이기 때문입니다.<br>
+<br></p>
+</li>
 </ul>
 </li>
 <li><p>Alternating Albegra입니다.</p>
@@ -13248,8 +13248,8 @@ $ 으로 정의됩니다.<br>
 <li><code>Tensor Product</code> : "두 벡터 공간의 정보를 다 가진 새로운 벡터공간을 만들고 싶다."  </li>
 <li><code>Exterior Product</code> : "벡터들로 이루어진 공간의 부피와 넓이를 구하고 싶다."<br>
 <br>  </li>
-<li>두 벡터로 이루어진 공간이 <code>Outer Product</code>이고, 두 벡터로 이루어진 공간의 부피가 <code>Cross Product</code>입니다.<br>
-따라서 <code>outer product</code>의 determinant가 <code>cross product</code>의 크기가 됩니다.</li>
+<li>두 벡터로 이루어진 공간이 <code>Outer Product</code>이고, 두 벡터로 이루어진 공간의 부피가 <code>Cross Product</code>입니다.  </li>
+<li>그리고 <code>outer product</code>의 determinant는 0입니다.  </li>
 </ul>
 <h3 id="3.-For-What:-Tensor-Product&#50752;-External-Product&#47484;-&#50612;&#46356;&#50640;-&#49324;&#50857;&#54616;&#45716;&#44032;?">3. For What: Tensor Product&#50752; External Product&#47484; &#50612;&#46356;&#50640; &#49324;&#50857;&#54616;&#45716;&#44032;?<a class="anchor-link" href="#3.-For-What:-Tensor-Product&#50752;-External-Product&#47484;-&#50612;&#46356;&#50640;-&#49324;&#50857;&#54616;&#45716;&#44032;?">&#182;</a></h3><ul>
 <li><code>Tensor Product</code> : Deep Learning, Computer Vision에서 제일 잘 쓰이는 예시는 <code>style transfer</code>등에 적용되는 <code>gram matrix</code>가 있습니다.    <ul>
