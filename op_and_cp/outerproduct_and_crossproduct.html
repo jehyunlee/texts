@@ -13144,7 +13144,8 @@ $
 <a href="https://jjycjnmath.tistory.com/537">jjycjn's Math Storehouse</a><br>
 <a href="https://www.math3ma.com">MATH3MA</a><br>
 <a href="https://math.stackexchange.com">StackExchange Mathematics</a><br>
-<a href="http://mathworld.wolfram.com/">Wolfram Mathworld</a>
+<a href="http://mathworld.wolfram.com/">Wolfram Mathworld</a><br>
+<a href="https://github.com/YBIGTA">YBIGTA님 github</a>
 <br>  </li>
 </ul>
 </blockquote>
@@ -13208,11 +13209,31 @@ $ 으로 정의됩니다.<br>
 <br>  </li>
 </ul>
 </li>
-<li>두 개의 vector space $\text{V}$로부터 생성되는 tensor product $V\otimes V$를 생각해 봅시다.  <ul>
+<li><p>두 개의 vector space $\text{V}$로부터 생성되는 tensor product $V\otimes V$를 생각해 봅시다.</p>
+<ul>
 <li>그러면, Exterior algebra $\wedge(E)$ 는 다음 집합 위에 정의되는 이중선형(bilinear)연산입니다.<br>
   $V\otimes V/\text{I, where I} = \{\mathbf{v}\otimes \mathbf{v}|  \forall\mathbf{v} \text{  in } V \}$  </li>
-<li>즉, 자기 자신으로 tensor product를 한 녀석들을 전부 0으로 간주하겠다는 뜻입니다.
+<li>즉, 자기 자신으로 tensor product를 한 녀석들을 전부 0으로 간주하겠다는 뜻입니다.</li>
+<li>예를 들면, 아래와 같은 행렬들은 모두 0입니다.<br>
+  $(1,2) \otimes (1, 2) = \begin{bmatrix}1&amp;2\\2&amp;4\end{bmatrix}= 0$<br>
+  $(0,1) \otimes (0, 1) = \begin{bmatrix}0&amp;0\\0&amp;1\end{bmatrix}= 0$<br>
 <br>  </li>
+</ul>
+</li>
+<li><p>왜 0으로 정의했나면, 넓이와 부피 때문에 그렇습니다.</p>
+<ul>
+<li>exterior product는 넓이, 부피, 초부피를 의미합니다.  </li>
+<li>그리고, 직관적으로 <strong>하나의 벡터로 생성되는 도형의 부피는 0</strong>이기 때문입니다.<br>
+<br>  </li>
+</ul>
+</li>
+<li><p>Alternating Albegra입니다.</p>
+<ul>
+<li>무슨 말이냐면, $f(\cdots, x_{i}, \cdots, x_{j}, \cdots) = -f(\cdots, x_{j}, \cdots, x_{i}, \cdots)$ 라는 입니다.</li>
+<li>Tensor Product는 $x \otimes y = -y \otimes x$ 라는 관계가 있습니다.<br>
+  항등식 $(x+y) \otimes (x+y) = x \otimes y + y \otimes x = 0$ 에서 유도할 수 있습니다.  </li>
+<li>Exterior algebra는 biliear이므로 $x \wedge y = -y \wedge x$ 도 성립합니다.  </li>
+<li>마찬가지 이유로 $f(0,0,\cdots,0)=0$ 일 수 밖에 없어 기함수가 됩니다.  </li>
 </ul>
 </li>
 </ul>
@@ -13220,18 +13241,75 @@ $ 으로 정의됩니다.<br>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.-Why:-&#50780;-&#50864;&#47532;&#44032;-Tensor-Product&#50752;-External-Product&#47484;-&#49373;&#44033;&#54616;&#45716;&#44032;?">2. Why: &#50780; &#50864;&#47532;&#44032; Tensor Product&#50752; External Product&#47484; &#49373;&#44033;&#54616;&#45716;&#44032;?<a class="anchor-link" href="#2.-Why:-&#50780;-&#50864;&#47532;&#44032;-Tensor-Product&#50752;-External-Product&#47484;-&#49373;&#44033;&#54616;&#45716;&#44032;?">&#182;</a></h3><ul>
+<li><code>Tensor Product</code> : "두 벡터 공간의 정보를 다 가진 새로운 벡터공간을 만들고 싶다."  </li>
+<li><code>Exterior Product</code> : "벡터들로 이루어진 공간의 부피와 넓이를 구하고 싶다."<br>
+<br>  </li>
+<li>두 벡터로 이루어진 공간이 <code>Outer Product</code>이고, 두 벡터로 이루어진 공간의 부피가 <code>Cross Product</code>입니다.<br>
+따라서 <code>outer product</code>의 determinant가 <code>cross product</code>가 됩니다.</li>
+</ul>
+<h3 id="3.-For-What:-Tensor-Product&#50752;-External-Product&#47484;-&#50612;&#46356;&#50640;-&#49324;&#50857;&#54616;&#45716;&#44032;?">3. For What: Tensor Product&#50752; External Product&#47484; &#50612;&#46356;&#50640; &#49324;&#50857;&#54616;&#45716;&#44032;?<a class="anchor-link" href="#3.-For-What:-Tensor-Product&#50752;-External-Product&#47484;-&#50612;&#46356;&#50640;-&#49324;&#50857;&#54616;&#45716;&#44032;?">&#182;</a></h3><ul>
+<li><code>Tensor Product</code> : Deep Learning, Computer Vision에서 제일 잘 쓰이는 예시는 <code>style transfer</code>등에 적용되는 <code>gram matrix</code>가 있습니다.    <ul>
+<li><code>gram matrix</code>에 대한 설명은 다음 <a href="https://youtu.be/RWro8WzTDSM">동영상</a>, <a href="https://towardsdatascience.com/neural-style-transfer-tutorial-part-1-f5cd3315fa7f">글1</a>, <a href="https://github.com/YBIGTA/data-science-2018/blob/master/DLCV/2018-02-02-Neural-style-transefer.md">글2</a>를 참고하시면 좋겠습니다.</li>
+</ul>
+</li>
+<li><code>Exterior Product</code> : 당연히 넓이, 부피 계산에 사용합니다.<br>
+<br>    </li>
+</ul>
 
-    </div>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="3.1.-Style-Transfer&#50640;&#49436;&#51032;-Gram-Matrix">3.1. <code>Style Transfer</code>&#50640;&#49436;&#51032; <code>Gram Matrix</code><a class="anchor-link" href="#3.1.-Style-Transfer&#50640;&#49436;&#51032;-Gram-Matrix">&#182;</a></h4><ul>
+<li><code>outer product</code>의 사용 예시로, <code>style transfer</code>에 적용된 <code>gram matrix</code>를 간단히 소개합니다.  <blockquote><p>source : <a href="https://github.com/YBIGTA/data-science-2018/blob/master/DLCV/2018-02-02-Neural-style-transefer.md">YBIGTA님 github 글</a></p>
+</blockquote>
+</li>
+</ul>
+<p><strong>(1) Style Transfer</strong></p>
+<ul>
+<li>특정 이미지에서 추출한 스타일을 다른 이미지에 입히는 행위입니다.<br>
+<img src="./images/styletransfer.png" alt="style_transfer"><br>
+<br>  </li>
+</ul>
+<p><strong>(2) Activation Maps</strong></p>
+<ul>
+<li>이미지를 <code>VGG</code>와 같은 convolutional layers에 통과시키면, 필터 갯수만큼의 새로운 map이 나옵니다.  </li>
+<li>아래는 9개의 필터에서 나온 activation map을 이미지로 복원한 결과입니다.  </li>
+<li>빨간색으로 표시된 부분에서는 수직선이, 파란색 부분에서는 주황색을 탐지하는 것이 보입니다.<br>
+<img src="./images/gram_00.png" alt="amaps"><br>
+<br>  </li>
+</ul>
+<p><strong>(3) Correlations between channels: Gram matrix</strong></p>
+<ul>
+<li>channel간 correlation을 구하기 위해, 먼저 3D tensor를 unroll해서 matrix로 만듭니다.  </li>
+<li>$n_{W} \times n_{H} \times n_{C}$ 차원이 $(n_{H} \times n_{W}) \times n_{C}$ 로 변환됩니다.  </li>
+<li><p>이 matrix를 $A$라고 합시다.<br>
+<img src="./images/gram_01.png" alt="unroll"><br>
+<br></p>
+</li>
+<li><p>channel간 correlation은 $A \otimes A = AA^{T}$로 표현할 수 있습니다.</p>
+</li>
+<li><p>이를 <code>Gram matrix</code>라고 부릅니다.<br>
+<img src="./images/gram_02.png" alt="gmatrix"><br>
+<br></p>
+</li>
+<li><p>Style Image (S)의 activation map으로부터 gram matrix를 만든 것을 $G^{[l](S)}$, Generation Image(G)를 같은 방법으로 변환한 것을 $G^{[l](G)}$라고 부릅시다.</p>
+</li>
+<li>두 <code>Gram matrix</code>는 각각 S의 Style, G의 Style 정보를 담고 있다고 볼 수 있습니다.  </li>
+<li>두 matrix가 유사하다면, S와 G는 유사한 스타일을 지녔다고 할 수 있습니다.  </li>
+<li>이에 따라 style cost는 다음과 같의 정의됩니다.<br>
+<img src="./images/cost.png" alt="cost"><br>
+<br>  </li>
+</ul>
 
+</div>
+</div>
 </div>
     </div>
   </div>
