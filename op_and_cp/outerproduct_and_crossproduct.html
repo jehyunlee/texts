@@ -13136,14 +13136,17 @@ $
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.-Cross-Product-vs-Outer-Product">1. Cross Product vs Outer Product<a class="anchor-link" href="#1.-Cross-Product-vs-Outer-Product">&#182;</a></h3><blockquote><p>Cross Product와 Outer Product는 본질적으로 비슷하지만 다르다고 합니다.<br>
-<a href="https://www.youtube.com/channel/UC2OC6sqKOSLNL4S6g1L3SeA">딥러닝하는 의사</a>님께서 친절한 설명을 주셨습니다.<br>
- 
-그 외 아래 레퍼런스를 참고했습니다.<br>
+<h3 id="1.-Cross-Product-vs-Outer-Product">1. Cross Product vs Outer Product<a class="anchor-link" href="#1.-Cross-Product-vs-Outer-Product">&#182;</a></h3><blockquote><ul>
+<li><a href="https://www.youtube.com/channel/UC2OC6sqKOSLNL4S6g1L3SeA">딥러닝하는 의사</a>님께서 친절한 설명을 주셨습니다.<br>
+<code>Cross Product</code>와 <code>Outer Product</code>는 비슷하지만 본질적으로 다르다고 합니다.<br>
+<br>   </li>
+<li>그 외 아래 레퍼런스를 참고했습니다.<br>
 <a href="https://jjycjnmath.tistory.com/537">jjycjn's Math Storehouse</a><br>
 <a href="https://www.math3ma.com">MATH3MA</a><br>
 <a href="https://math.stackexchange.com">StackExchange Mathematics</a><br>
-<br></p>
+<a href="http://mathworld.wolfram.com/">Wolfram Mathworld</a>
+<br>  </li>
+</ul>
 </blockquote>
 <h4 id="1.0.-&#47928;&#51228;-&#51116;&#51221;&#51032;">1.0. &#47928;&#51228; &#51116;&#51221;&#51032;<a class="anchor-link" href="#1.0.-&#47928;&#51228;-&#51116;&#51221;&#51032;">&#182;</a></h4><ul>
 <li><code>Cross Product</code>를 일반화하면 <code>Exterior Product</code>가 됩니다. (Euclidean → non-Euclidean)</li>
@@ -13176,7 +13179,7 @@ $
 <br></li>
 <li><p>서로 다른 차원의 벡터공간들을 어떻게 합칠 수 있을까요?  선택지는 <strong>행렬</strong>밖에 없습니다.<br>
 <br> 
-$V$와 $W$에 각기 $\mathbf{v} = \begin{bmatrix}v_{1}\\v_{2}\\\vdots\\v_{n}\end{bmatrix}, \mathbf{w} = \begin{bmatrix}w_{1}\\w_{2}\\\vdots\\w_{n}\end{bmatrix}$ 이라는 두 행렬이 있고, $\mathbf{v} = v_{1}\mathbf{e_{1}} + v_{2}\mathbf{e_{2}} + \cdots + v_{n}\mathbf{e_{n}}$ 일 때<br>
+$V$와 $W$에 각기 $\mathbf{v} = \begin{bmatrix}v_{1}\\v_{2}\\\vdots\\v_{n}\end{bmatrix}, \mathbf{w} = \begin{bmatrix}w_{1}\\w_{2}\\\vdots\\w_{m}\end{bmatrix}$ 이라는 두 행렬이 있고, $\mathbf{v} = v_{1}\mathbf{e_{1}} + v_{2}\mathbf{e_{2}} + \cdots + v_{n}\mathbf{e_{n}}$ 일 때<br>
 <br> 
 $
 \mathbf{v}\otimes\mathbf{w} = \begin{bmatrix}v_{1}w_{1}&amp;v_{1}w_{2}&amp;\cdots&amp;v_{1}w_{m}\\v_{2}w_{1}&amp;v_{2}w_{2}&amp;\cdots&amp;v_{2}w_{m}\\\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\v_{n}w_{1}&amp;v_{n}w_{2}&amp;\cdots&amp;v_{n}w_{m}\\\end{bmatrix}
@@ -13189,6 +13192,46 @@ $ 으로 정의됩니다.<br>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="1.2.-Exterior-Product">1.2. Exterior Product<a class="anchor-link" href="#1.2.-Exterior-Product">&#182;</a></h4><ul>
+<li><code>Exterior Product</code>의 시작점은 벡터공간 $V$와 $W$가 있을 때, 이들로부터 만들어낸 <code>Tensor Product</code> $V\otimes W$ 입니다.<br>
+<br>  </li>
+<li>먼저 <code>quotient</code>이라는 개념을 이해해 봅시다.  Exterior product가 quotient로 정의되기 때문입니다.<ul>
+<li>"equivalent relation $\text{~}$ 에 대해서 집합 $\text{X}$를 $\text{X/~}$로 잘라준 것" 입니다. (어려워도 조금만 더 읽어주세요)  </li>
+<li>직관적인 예시로 '24시간 법'이 있습니다. 15시에서 10시간이 지나면 1시가 됩니다.  </li>
+<li>이것이 quotient의 전부입니다. 우리는 24를 0으로 보겠다고 약속을 한 것이고, 그 이외의 연산은 모두 동일합니다.  </li>
+<li><code>mod</code>와 같습니다. 이걸 우리는 $\text{Z/24Z}$, 또는 $\text{Z/~}$로 표기합니다.  </li>
+<li>이 때 사용된 $\text{~}$는 <a href="http://mathworld.wolfram.com/QuotientSpace.html"><code>equivalence relation</code></a>입니다.<br>
+<br>  </li>
+</ul>
+</li>
+<li>두 개의 vector space $\text{V}$로부터 생성되는 tensor product $V\otimes V$를 생각해 봅시다.  <ul>
+<li>그러면, Exterior algebra $\wedge(E)$ 는 다음 집합 위에 정의되는 이중선형(bilinear)연산입니다.<br>
+  $V\otimes V/\text{I, where I} = \{\mathbf{v}\otimes \mathbf{v}|  \forall\mathbf{v} \text{  in } V \}$  </li>
+<li>즉, 자기 자신으로 tensor product를 한 녀석들을 전부 0으로 간주하겠다는 뜻입니다.
+<br>  </li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
