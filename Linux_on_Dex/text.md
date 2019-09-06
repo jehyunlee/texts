@@ -283,4 +283,4 @@ CPU의 성능이 좋은 것도 아니고, GPU는 존재하지 않습니다.  하
   작업을 마무리하고 `LoD_Share` 폴더를 `Dex`에서 보면 이렇게 보입니다.  
   <br>
   
-  ![fin](/images/LoD_Share.jpg)
+  ![fin](images/LoD_Share.jpg)
