@@ -2,7 +2,8 @@
 
 > `pypy` 공식 사이트 [[Link](http://pypy.org/)]  
 > `Ubuntu`에 `pypy` 설치하기 [[Link](https://blog.naver.com/PostView.nhn?blogId=stop2y&logNo=221524935207&categoryNo=0&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView)]  
-> `pypy` Library 호환성 리스트[[Link](http://packages.pypy.org/)]
+> `pypy` Library 호환성 리스트[[Link](http://packages.pypy.org/)]  
+> `pypy` 나무위키 설명 [[Link](https://namu.wiki/w/PyPy)]  
 
 #### 1. `python` vs `pypy`
 
@@ -16,5 +17,8 @@
 `python`과 `pypy`는 각기 방금 계산을 시작한 것과 끝낸 상태의 차이가 있을 뿐, 동일한 코드 실행입니다.  
 `python`은 113 시간이 걸릴 것이라고 엄살을 부리는 반면,  
 `pypy`는 15분만에 계산을 끝내버렸습니다.  
+<br>  
 
-#### 2. `pypy`는 왜 빠를까요?
+#### 2. `pypy`는 뭔가요?
+1. `pypy`는 JIT(just-in-time) 컴파일하는 파이썬으로 개발되었습니다.  
+2. 자기 자신을
