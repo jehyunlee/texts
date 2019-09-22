@@ -9,7 +9,7 @@
 
 * 먼저, 다음의 속도 차이를 봅시다.  
 
-| **run by** | **python** | **pypy **|
+| **run by** | **python** | **pypy**|
 |---|:---:|:---:|
 |**std. out**|![python](/pypy_install_ubuntu/images/python.png)|![python](/pypy_install_ubuntu/images/pypy.png)  |
 | **remark** | just started | finished|
