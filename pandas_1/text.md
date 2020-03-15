@@ -4,7 +4,6 @@
   <img src='1-pandas1.png'>
 </p>
 
-
 * Pandas 1.0이 출시되고 일부 feature가 사라졌고(deprciated) 새로운 기능이 추가되었습니다.
 * 새로 추가된 기능 중에는 사용자들이 기다리던 기능이 많습니다.
 <br>
