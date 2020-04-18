@@ -21,7 +21,6 @@
 > [pandas.DataFrame.convert_dtypes](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.convert_dtypes.html?highlight=convert_dtypes)
 <br>
 
-
 ### 0. pandas 1.0을 맞이할 준비
 * pandas 1.0을 사용하기 위해서는 python version이 3.6.1 이상이어야 합니다.
 
