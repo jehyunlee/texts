@@ -12,4 +12,3 @@
 7. `pypy` [ubuntu에 pypy 설치하기](https://github.com/jehyunlee/texts/blob/master/pypy_install_ubuntu/text.md)
 8. `docker` [Windows 10 home에 `docker`설치하고 GUI, 한글 입력 환경 구축하기](https://github.com/jehyunlee/docker/blob/master/Win10Home/text.md)  
 9. `book` [대변동 (재레드 다이아몬드, 2019)](https://github.com/jehyunlee/texts/blob/master/book/1/text.md)
-10. `pandas` [pandas 1.0](https://github.com/jehyunlee/texts/blob/master/pandas_1/text.md)
