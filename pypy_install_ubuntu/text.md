@@ -59,6 +59,7 @@ $ pypy3 get-pip.py
 $ sudo ln -s /usr/local/bin/[pypy 폴더]/bin/pip pypy3-pip  
 $ sudo ln -s /usr/local/bin/[pypy 폴더]/bin/easy_install pypy3-easy_install
 
+
 # 선택사항  
 $ sudo apt-get install upgrade  
 $ sudo apt-get install update  
