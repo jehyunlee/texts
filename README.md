@@ -12,3 +12,4 @@
 7. `pypy` [ubuntu에 pypy 설치하기](https://github.com/jehyunlee/texts/blob/master/pypy_install_ubuntu/text.md)
 8. `docker` [Windows 10 home에 `docker`설치하고 GUI, 한글 입력 환경 구축하기](https://github.com/jehyunlee/docker/blob/master/Win10Home/text.md)  
 
+
